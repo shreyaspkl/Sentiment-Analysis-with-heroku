@@ -1,4 +1,3 @@
-%%writefile ML-app.py
 import streamlit as st
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
