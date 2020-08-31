@@ -15,7 +15,7 @@ y = df1.iloc[:,0].values
 import numpy as np
 Y=[0] * (len(y))
 for i in range(0,(len(y))):
-  if y[i]==1 or y[i]==2 or y[i]==3 or y[i]==4:
+  if y[i]==1 or y[i]==2 or y[i]==3 :
     Y[i] = 0              # Negative sentiments
   else:
     Y[i] = 1              # Positive sentiments
@@ -30,7 +30,7 @@ def u_in():
   return a
 
 st.title("ML Project")
-st.subheader("This is sentiment analysis model.")
+st.subheader("This is sentiment analysis model by Shreyas.")
 
 df = u_in()
 pred = text_model.predict(df)
