@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix,classification_report
+from sklearn.linear_model import SGDClassifier
 
 
 df = pd.read_csv('Amazon Review.csv')
@@ -14,11 +15,11 @@ y = df1.iloc[:,0].values
 import numpy as np
 Y=[0] * (len(y))
 for i in range(0,(len(y))):
-  if y[i]==1 or y[i]==2 or y[i]==3 or y[i]==4:
+  if y[i]==1 or y[i]==2 or y[i]==3 :
     Y[i] = 0              # Negative sentiments
   else:
     Y[i] = 1              # Positive sentiments
-text_model = Pipeline([('tfidf',TfidfVectorizer(binary = True,max_df=0.611111111111111,norm = 'l2')),('model',MultinomialNB(alpha = 0.058,fit_prior=True))])
+text_model = Pipeline([('tfidf',TfidfVectorizer(binary = True,max_df=0.611111111111111,norm = 'l2')),('model',SGDClassifier(loss="hinge",penalty="l2",tol=None,max_iter=5))])
 
 text_model.fit(X,Y)
 
