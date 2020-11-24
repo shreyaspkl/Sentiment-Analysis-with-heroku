@@ -9,7 +9,7 @@ from sklearn.linear_model import SGDClassifier
 
 df = pd.read_csv('Amazon Review.csv')
 df1 = df.dropna(subset=['Text'])
-df1 = df1.dropna(subset=['Rating'])
+df1 = df1.dropna(subset=['Rating'])  
 X = df1.iloc[:,1].values
 y = df1.iloc[:,0].values
 import numpy as np
