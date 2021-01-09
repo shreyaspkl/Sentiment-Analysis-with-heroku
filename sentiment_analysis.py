@@ -6,6 +6,16 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix,classification_report
 from sklearn.linear_model import SGDClassifier
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 df = pd.read_csv('Amazon Review.csv')
 df1 = df.dropna(subset=['Text'])
