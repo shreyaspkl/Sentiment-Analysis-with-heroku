@@ -32,7 +32,7 @@ def u_in():
 st.title("ML Project")
 st.subheader("This is sentiment analysis model made by Shreyas Mandaokar")
 df = u_in()
-pred = text_model.predict(df) 
+pred = text_model.predict(df)  
 if pred == 0:
   st.write("Negative Sentiment")
 else:
