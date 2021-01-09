@@ -40,7 +40,7 @@ def u_in():
   return a
 
 st.title("ML Project")
-st.subheader("This is sentiment analysis model made by Shreyas Mandaokar")
+st.title("Sentiment Analysis model made by Shreyas Mandaokar")
 df = u_in()
 pred = text_model.predict(df)  
 if pred == 0:
