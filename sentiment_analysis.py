@@ -39,8 +39,8 @@ def u_in():
   a.append(text)
   return a
 
-st.title("ML Project")
-st.title("Sentiment Analysis model made by Shreyas Mandaokar")
+st.title("Machine Learning Project")
+st.title("Sentiment Analysis model ")
 df = u_in()
 pred = text_model.predict(df)  
 if pred == 0:
