@@ -1,4 +1,4 @@
-# SD Project
+# Natural Language Processing
 Sentiment analysis model deployed using streamlit herokuu
 
 Link to the app-  
